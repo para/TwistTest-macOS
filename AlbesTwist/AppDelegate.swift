@@ -2,13 +2,15 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    var mainCoordinator: MainCoordinator?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-
+        mainCoordinator = MainCoordinator()
+        mainCoordinator?.start()
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
     }
 
     // MARK: - Core Data stack

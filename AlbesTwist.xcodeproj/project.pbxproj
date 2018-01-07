@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C2200127BA00DEF997 /* AppDelegate.swift */; };
-		72E1B5C5200127BA00DEF997 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C4200127BA00DEF997 /* ViewController.swift */; };
+		72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C4200127BA00DEF997 /* MainViewController.swift */; };
 		72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C6200127BA00DEF997 /* AlbesTwist.xcdatamodeld */; };
 		72E1B5CA200127BA00DEF997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E1B5C9200127BA00DEF997 /* Assets.xcassets */; };
 		72E1B5CD200127BA00DEF997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E1B5CB200127BA00DEF997 /* Main.storyboard */; };
 		72E1B5D9200127BA00DEF997 /* AlbesTwistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5D8200127BA00DEF997 /* AlbesTwistTests.swift */; };
 		72E1B5E4200127BA00DEF997 /* AlbesTwistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5E3200127BA00DEF997 /* AlbesTwistUITests.swift */; };
+		72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FB200273B800DEF997 /* Coordinator.swift */; };
+		72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FD20027B2400DEF997 /* LoginViewController.swift */; };
+		72E1B60020027C7E00DEF997 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FF20027C7E00DEF997 /* MainCoordinator.swift */; };
+		72E1B602200283E900DEF997 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B601200283E900DEF997 /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		72E1B5BF200127B900DEF997 /* AlbesTwist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbesTwist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E1B5C2200127BA00DEF997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		72E1B5C4200127BA00DEF997 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		72E1B5C4200127BA00DEF997 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		72E1B5C7200127BA00DEF997 /* AlbesTwist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlbesTwist.xcdatamodel; sourceTree = "<group>"; };
 		72E1B5C9200127BA00DEF997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72E1B5CC200127BA00DEF997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +52,10 @@
 		72E1B5DF200127BA00DEF997 /* AlbesTwistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbesTwistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E1B5E3200127BA00DEF997 /* AlbesTwistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbesTwistUITests.swift; sourceTree = "<group>"; };
 		72E1B5E5200127BA00DEF997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72E1B5FB200273B800DEF997 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		72E1B5FD20027B2400DEF997 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		72E1B5FF20027C7E00DEF997 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		72E1B601200283E900DEF997 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +106,10 @@
 		72E1B5C1200127B900DEF997 /* AlbesTwist */ = {
 			isa = PBXGroup;
 			children = (
+				72E1B5FA200273A800DEF997 /* Coordinators */,
 				72E1B5C2200127BA00DEF997 /* AppDelegate.swift */,
-				72E1B5C4200127BA00DEF997 /* ViewController.swift */,
+				72E1B5C4200127BA00DEF997 /* MainViewController.swift */,
+				72E1B5FD20027B2400DEF997 /* LoginViewController.swift */,
 				72E1B5C9200127BA00DEF997 /* Assets.xcassets */,
 				72E1B5CB200127BA00DEF997 /* Main.storyboard */,
 				72E1B5CE200127BA00DEF997 /* Info.plist */,
@@ -125,6 +135,16 @@
 				72E1B5E5200127BA00DEF997 /* Info.plist */,
 			);
 			path = AlbesTwistUITests;
+			sourceTree = "<group>";
+		};
+		72E1B5FA200273A800DEF997 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				72E1B5FB200273B800DEF997 /* Coordinator.swift */,
+				72E1B5FF20027C7E00DEF997 /* MainCoordinator.swift */,
+				72E1B601200283E900DEF997 /* LoginCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72E1B5C5200127BA00DEF997 /* ViewController.swift in Sources */,
+				72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */,
+				72E1B60020027C7E00DEF997 /* MainCoordinator.swift in Sources */,
+				72E1B602200283E900DEF997 /* LoginCoordinator.swift in Sources */,
+				72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */,
 				72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */,
+				72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */,
 				72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
