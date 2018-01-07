@@ -15,6 +15,7 @@
 		72E1B5D9200127BA00DEF997 /* AlbesTwistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5D8200127BA00DEF997 /* AlbesTwistTests.swift */; };
 		72E1B5E4200127BA00DEF997 /* AlbesTwistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5E3200127BA00DEF997 /* AlbesTwistUITests.swift */; };
 		72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FB200273B800DEF997 /* Coordinator.swift */; };
+		72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FD20027B2400DEF997 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		72E1B5E3200127BA00DEF997 /* AlbesTwistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbesTwistUITests.swift; sourceTree = "<group>"; };
 		72E1B5E5200127BA00DEF997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72E1B5FB200273B800DEF997 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		72E1B5FD20027B2400DEF997 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				72E1B5FA200273A800DEF997 /* Coordinators */,
 				72E1B5C2200127BA00DEF997 /* AppDelegate.swift */,
 				72E1B5C4200127BA00DEF997 /* MainViewController.swift */,
+				72E1B5FD20027B2400DEF997 /* LoginViewController.swift */,
 				72E1B5C9200127BA00DEF997 /* Assets.xcassets */,
 				72E1B5CB200127BA00DEF997 /* Main.storyboard */,
 				72E1B5CE200127BA00DEF997 /* Info.plist */,
@@ -274,6 +277,7 @@
 				72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */,
 				72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */,
 				72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */,
+				72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */,
 				72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
