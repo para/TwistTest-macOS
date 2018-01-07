@@ -16,6 +16,7 @@
 		72E1B5E4200127BA00DEF997 /* AlbesTwistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5E3200127BA00DEF997 /* AlbesTwistUITests.swift */; };
 		72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FB200273B800DEF997 /* Coordinator.swift */; };
 		72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FD20027B2400DEF997 /* LoginViewController.swift */; };
+		72E1B60020027C7E00DEF997 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FF20027C7E00DEF997 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		72E1B5E5200127BA00DEF997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72E1B5FB200273B800DEF997 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		72E1B5FD20027B2400DEF997 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		72E1B5FF20027C7E00DEF997 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				72E1B5FB200273B800DEF997 /* Coordinator.swift */,
+				72E1B5FF20027C7E00DEF997 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */,
+				72E1B60020027C7E00DEF997 /* MainCoordinator.swift in Sources */,
 				72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */,
 				72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */,
 				72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */,
