@@ -17,6 +17,7 @@
 		72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FB200273B800DEF997 /* Coordinator.swift */; };
 		72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FD20027B2400DEF997 /* LoginViewController.swift */; };
 		72E1B60020027C7E00DEF997 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FF20027C7E00DEF997 /* MainCoordinator.swift */; };
+		72E1B602200283E900DEF997 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B601200283E900DEF997 /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		72E1B5FB200273B800DEF997 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		72E1B5FD20027B2400DEF997 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		72E1B5FF20027C7E00DEF997 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		72E1B601200283E900DEF997 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				72E1B5FB200273B800DEF997 /* Coordinator.swift */,
 				72E1B5FF20027C7E00DEF997 /* MainCoordinator.swift */,
+				72E1B601200283E900DEF997 /* LoginCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			files = (
 				72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */,
 				72E1B60020027C7E00DEF997 /* MainCoordinator.swift in Sources */,
+				72E1B602200283E900DEF997 /* LoginCoordinator.swift in Sources */,
 				72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */,
 				72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */,
 				72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */,
