@@ -21,6 +21,7 @@
 		72E1B6052002E56300DEF997 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B6042002E56300DEF997 /* Request.swift */; };
 		72E1B6072002E63800DEF997 /* UsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B6062002E63800DEF997 /* UsersRequest.swift */; };
 		72E1B6092002E8CD00DEF997 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B6082002E8CD00DEF997 /* SearchRequest.swift */; };
+		72E1B60D2002EAB700DEF997 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B60C2002EAB700DEF997 /* LoginResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		72E1B6042002E56300DEF997 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		72E1B6062002E63800DEF997 /* UsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequest.swift; sourceTree = "<group>"; };
 		72E1B6082002E8CD00DEF997 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		72E1B60C2002EAB700DEF997 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				72E1B6042002E56300DEF997 /* Request.swift */,
 				72E1B6062002E63800DEF997 /* UsersRequest.swift */,
 				72E1B6082002E8CD00DEF997 /* SearchRequest.swift */,
+				72E1B60C2002EAB700DEF997 /* LoginResponse.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */,
 				72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */,
 				72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */,
+				72E1B60D2002EAB700DEF997 /* LoginResponse.swift in Sources */,
 				72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
