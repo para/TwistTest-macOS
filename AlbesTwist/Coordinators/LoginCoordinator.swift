@@ -21,6 +21,7 @@ class LoginCoordinator: Coordinator {
         let storyboard = getMainStoryboard()
         let loginVC = storyboard.instantiateController(withIdentifier: Constants.loginSceneID) as! LoginViewController
         loginVC.delegate = self
+        loginVC.presenter = LoginViewPresenter(dataSource: CoreDataDataSource(), backend: StagingBackend())
         windowController.contentViewController?
             .presentViewControllerAsSheet(loginVC)
     }
