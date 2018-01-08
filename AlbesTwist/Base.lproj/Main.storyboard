@@ -180,20 +180,23 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="8NQ-Qv-RtS"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Username" drawsBackground="YES" id="V1B-an-MXV">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Email" drawsBackground="YES" id="V1B-an-MXV">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qYP-n4-B7w">
+                            <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kg4-97-e8N">
                                 <rect key="frame" x="20" y="79" width="360" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" id="mc1-8Y-BNw">
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="iWS-7R-ulb">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                                    <allowedInputSourceLocales>
+                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                    </allowedInputSourceLocales>
+                                </secureTextFieldCell>
+                            </secureTextField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bdA-ZK-FcW">
                                 <rect key="frame" x="144" y="23" width="112" height="33"/>
                                 <constraints>
@@ -210,20 +213,24 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="bdA-ZK-FcW" firstAttribute="centerX" secondItem="qYP-n4-B7w" secondAttribute="centerX" id="0Uh-sh-1b5"/>
                             <constraint firstAttribute="bottom" secondItem="bdA-ZK-FcW" secondAttribute="bottom" constant="30" id="1Ez-28-69g"/>
+                            <constraint firstItem="Kg4-97-e8N" firstAttribute="height" secondItem="BQU-BB-8at" secondAttribute="height" id="57A-oh-L7p"/>
                             <constraint firstItem="I6h-Kg-aew" firstAttribute="top" secondItem="8jh-bl-S9N" secondAttribute="top" constant="20" symbolic="YES" id="5kf-6h-OgJ"/>
+                            <constraint firstItem="bdA-ZK-FcW" firstAttribute="centerX" secondItem="Kg4-97-e8N" secondAttribute="centerX" id="7Rp-Ui-obw"/>
                             <constraint firstAttribute="trailing" secondItem="BQU-BB-8at" secondAttribute="trailing" constant="20" id="EPW-ym-wBf"/>
                             <constraint firstAttribute="trailing" secondItem="I6h-Kg-aew" secondAttribute="trailing" constant="20" symbolic="YES" id="F3d-hW-OQV"/>
-                            <constraint firstItem="qYP-n4-B7w" firstAttribute="top" secondItem="BQU-BB-8at" secondAttribute="bottom" constant="15" id="Gd8-cB-8sO"/>
-                            <constraint firstItem="qYP-n4-B7w" firstAttribute="centerX" secondItem="BQU-BB-8at" secondAttribute="centerX" id="VNX-RV-yyp"/>
                             <constraint firstItem="I6h-Kg-aew" firstAttribute="leading" secondItem="8jh-bl-S9N" secondAttribute="leading" constant="20" symbolic="YES" id="a0i-uO-kiF"/>
+                            <constraint firstItem="Kg4-97-e8N" firstAttribute="top" secondItem="BQU-BB-8at" secondAttribute="bottom" constant="15" id="aeA-zO-tkZ"/>
+                            <constraint firstItem="Kg4-97-e8N" firstAttribute="centerX" secondItem="BQU-BB-8at" secondAttribute="centerX" id="cnC-dq-Dkw"/>
                             <constraint firstItem="BQU-BB-8at" firstAttribute="top" secondItem="I6h-Kg-aew" secondAttribute="bottom" constant="20" id="jej-xM-pvV"/>
-                            <constraint firstItem="qYP-n4-B7w" firstAttribute="width" secondItem="BQU-BB-8at" secondAttribute="width" id="kKV-A6-4l4"/>
-                            <constraint firstItem="qYP-n4-B7w" firstAttribute="height" secondItem="BQU-BB-8at" secondAttribute="height" id="t2x-Ai-6Al"/>
                             <constraint firstItem="BQU-BB-8at" firstAttribute="leading" secondItem="8jh-bl-S9N" secondAttribute="leading" constant="20" id="vOa-r5-dkg"/>
+                            <constraint firstItem="Kg4-97-e8N" firstAttribute="width" secondItem="BQU-BB-8at" secondAttribute="width" id="w50-EK-pac"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="BQU-BB-8at" id="3aR-x4-26O"/>
+                        <outlet property="passwordField" destination="Kg4-97-e8N" id="Ytq-M5-rN7"/>
+                    </connections>
                 </viewController>
                 <customObject id="0qI-5O-maA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

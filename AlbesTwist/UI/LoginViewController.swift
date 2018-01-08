@@ -5,6 +5,9 @@ protocol LoginViewControllerDelegate: class {
 }
 
 class LoginViewController: NSViewController {
+    @IBOutlet var emailField: NSTextField!
+    @IBOutlet var passwordField: NSTextField!
+
     var presenter: LoginPresenter!
     weak var delegate: LoginViewControllerDelegate?
 
@@ -16,7 +19,7 @@ class LoginViewController: NSViewController {
     }
 
     @IBAction func loginButtonPushed(_ sender: Any) {
-        presenter.doLogin(email: "", password: "")
+        presenter.doLogin(email: emailField.stringValue, password: passwordField.stringValue)
     }
 
 }
@@ -27,7 +30,7 @@ protocol LoginView: class {
     func showLoading()
     func hideLoading()
     func showLoginSuccess()
-    func showLoginError()
+    func showLoginError(errorText: String)
 }
 
 extension LoginViewController: LoginView {
@@ -43,8 +46,16 @@ extension LoginViewController: LoginView {
         delegate?.didLogin(self)
     }
 
-    func showLoginError() {
+    func showLoginError(errorText: String) {
+        let alert = NSAlert()
+        alert.alertStyle = .warning
+        alert.messageText = "Login Error"
+        alert.informativeText = errorText
+        alert.addButton(withTitle: "OK")
 
+        DispatchQueue.main.async {
+            alert.runModal()
+        }
     }
 }
 

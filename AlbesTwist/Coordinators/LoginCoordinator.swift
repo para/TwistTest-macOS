@@ -29,7 +29,9 @@ class LoginCoordinator: Coordinator {
 
 extension LoginCoordinator: LoginViewControllerDelegate {
     func didLogin(_ loginViewController: LoginViewController) {
-        loginViewController.dismiss(nil)
+        DispatchQueue.main.async {
+            loginViewController.dismiss(nil)
+        }
         delegate?.coordinatorDidLogin(self)
     }
 }

@@ -32,7 +32,7 @@ class LoginViewPresenter: LoginPresenter {
 
                 self?.loginView?.showLoginSuccess()
             } else {
-                self?.loginView?.showLoginError()
+                self?.loginView?.showLoginError(errorText: "Login failed, please try again.")
             }
         }
     }
