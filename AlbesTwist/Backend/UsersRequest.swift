@@ -18,10 +18,10 @@ enum UsersRequest: Request {
         }
     }
 
-    var params: [String: String]? {
+    var params: RequestParams? {
         switch self {
         case .login(let email, let password):
-            return ["email": email, "password": password]
+            return .body(["email": email, "password": password])
         }
     }
 

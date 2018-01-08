@@ -42,6 +42,8 @@ extension StagingBackend {
         let fullPath = "\(Constants.basePath)/\(req.path)"
         var urlRequest = URLRequest(url: URL(string: fullPath)!)
 
+        urlRequest.httpMethod = req.method.rawValue
+
         if let headers = req.headers {
             headers.forEach { (key, value) in
                 urlRequest.setValue(value, forHTTPHeaderField: key)
@@ -49,15 +51,29 @@ extension StagingBackend {
         }
 
         if let params = req.params {
-            let paramString = params
-                .map { (key, value) in
-                    "\(key)=\(value)"
-                }
-                .joined(separator: "&")
-            urlRequest.httpBody = paramString.data(using: .utf8, allowLossyConversion: false)
-        }
+            switch params {
+            case .body(let paramDict):
+                let paramString = paramDict
+                    .map { (key, value) in
+                        "\(key)=\(value)"
+                    }
+                    .joined(separator: "&")
 
-        urlRequest.httpMethod = req.method.rawValue
+                urlRequest.httpBody = paramString.data(using: .utf8, allowLossyConversion: false)
+            case .url(let paramDict):
+                let queryString = paramDict
+                    .map { (key, value) in
+                        "\(key)=\(value)"
+                    }
+                    .joined(separator: "&")
+                    .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+
+                if let queryString = queryString {
+                    let fullPathWithQuery = "\(fullPath)?\(queryString)"
+                    urlRequest.url = URL(string: fullPathWithQuery)
+                }
+            }
+        }
 
         return urlRequest
     }

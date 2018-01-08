@@ -5,9 +5,14 @@ enum HTTPMethod: String {
     case post = "POST"
 }
 
+enum RequestParams {
+    case body(_ : [String: String])
+    case url(_ : [String: String])
+}
+
 protocol Request {
     var path: String { get }
     var method: HTTPMethod { get }
-    var params: [String: String]? { get }
+    var params: RequestParams? { get }
     var headers: [String: String]? { get }
 }

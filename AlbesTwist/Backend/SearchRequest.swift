@@ -18,10 +18,10 @@ enum SearchRequest: Request {
         }
     }
 
-    var params: [String: String]? {
+    var params: RequestParams? {
         switch self {
         case .search(let query, _):
-            return ["query": query]
+            return .url(["query": query])
         }
     }
 
