@@ -1,5 +1,10 @@
 import Foundation
 
+enum BackendError: Error {
+    case noData
+    case badData
+}
+
 typealias ResponseHandler<T> = (Result<T, Error>) -> Void
 
 protocol Backend {

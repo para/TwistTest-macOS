@@ -19,7 +19,11 @@ class StagingBackend: Backend {
                 let decoder = JSONDecoder()
                 if let loginResponse = try? decoder.decode(LoginResponse.self, from: data) {
                     completion(.success(loginResponse))
+                } else {
+                    completion(.failure(BackendError.badData))
                 }
+            } else {
+                completion(.failure(BackendError.noData))
             }
         }
     }
@@ -36,7 +40,11 @@ class StagingBackend: Backend {
                 let decoder = JSONDecoder()
                 if let searchResponse = try? decoder.decode(SearchResponse.self, from: data) {
                     completion(.success(searchResponse))
+                } else {
+                    completion(.failure(BackendError.badData))
                 }
+            } else {
+                completion(.failure(BackendError.noData))
             }
         }
     }
