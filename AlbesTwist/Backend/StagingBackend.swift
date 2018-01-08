@@ -23,6 +23,23 @@ class StagingBackend: Backend {
             }
         }
     }
+
+    func search(query: String, token: String, completion: @escaping (Result<SearchResponse, Error>) -> Void) {
+        let searchRequest = SearchRequest.search(query: query, token: token)
+        execute(request: searchRequest) { data, error in
+            guard error == nil else {
+                completion(.failure(error!))
+                return
+            }
+
+            if let data = data {
+                let decoder = JSONDecoder()
+                if let searchResponse = try? decoder.decode(SearchResponse.self, from: data) {
+                    completion(.success(searchResponse))
+                }
+            }
+        }
+    }
 }
 
 // MARK: - Request Parsing & Execution

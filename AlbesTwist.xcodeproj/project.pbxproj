@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7290904B2003865200CA01D7 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290904A2003865200CA01D7 /* SearchResponse.swift */; };
 		72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C2200127BA00DEF997 /* AppDelegate.swift */; };
 		72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C4200127BA00DEF997 /* MainViewController.swift */; };
 		72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C6200127BA00DEF997 /* AlbesTwist.xcdatamodeld */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7290904A2003865200CA01D7 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		72E1B5BF200127B900DEF997 /* AlbesTwist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbesTwist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E1B5C2200127BA00DEF997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72E1B5C4200127BA00DEF997 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7290904C200388E900CA01D7 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				72E1B6042002E56300DEF997 /* Request.swift */,
+				72E1B6062002E63800DEF997 /* UsersRequest.swift */,
+				72E1B6082002E8CD00DEF997 /* SearchRequest.swift */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		7290904D200388F700CA01D7 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				72E1B60C2002EAB700DEF997 /* LoginResponse.swift */,
+				7290904A2003865200CA01D7 /* SearchResponse.swift */,
+			);
+			name = Response;
+			sourceTree = "<group>";
+		};
 		72E1B5B6200127B900DEF997 = {
 			isa = PBXGroup;
 			children = (
@@ -165,10 +186,8 @@
 		72E1B6032002E50D00DEF997 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
-				72E1B6042002E56300DEF997 /* Request.swift */,
-				72E1B6062002E63800DEF997 /* UsersRequest.swift */,
-				72E1B6082002E8CD00DEF997 /* SearchRequest.swift */,
-				72E1B60C2002EAB700DEF997 /* LoginResponse.swift */,
+				7290904C200388E900CA01D7 /* Request */,
+				7290904D200388F700CA01D7 /* Response */,
 				72E1B60E2002EAF100DEF997 /* Result.swift */,
 				72E1B6102002EB6200DEF997 /* Backend.swift */,
 				72E1B6122002EBBF00DEF997 /* StagingBackend.swift */,
@@ -320,6 +339,7 @@
 				72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */,
 				72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */,
 				72E1B6132002EBBF00DEF997 /* StagingBackend.swift in Sources */,
+				7290904B2003865200CA01D7 /* SearchResponse.swift in Sources */,
 				72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */,
 				72E1B60D2002EAB700DEF997 /* LoginResponse.swift in Sources */,
 				72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */,
