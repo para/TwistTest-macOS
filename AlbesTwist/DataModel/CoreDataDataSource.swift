@@ -44,15 +44,41 @@ class CoreDataDataSource: DataSource {
     }
 
     func getSearchResults() -> SearchResults? {
-        return nil
+        let context = persistentContainer.viewContext
+        let searchResultsFetchRequest = CDSearchResults.searchResultsFetchRequest()
+        do {
+            let fetchedSearchResults = try context.fetch(searchResultsFetchRequest)
+            return fetchedSearchResults.first?.dataModel
+        } catch {
+            fatalError("Failed to fetch CDSearchResults objects")
+        }
     }
 
     func saveSearchResults(_ results: SearchResults) {
-
+        let context = persistentContainer.viewContext
+        let newSearchResults = CDSearchResults.insertNewSearchResults(in: context)
+        newSearchResults.query = results.query
+        newSearchResults.ts = results.ts as NSDate
+        for item in results.items {
+            let newResultItem = CDResultItem.insertNewResultItem(in: context)
+            newResultItem.title = item.title
+            newResultItem.contents = item.contents
+            newResultItem.ts = item.ts as NSDate
+            newSearchResults.addToItems(newResultItem)
+        }
+        saveContext()
     }
 
     func deleteSearchResults() {
-
+        let context = persistentContainer.viewContext
+        let searchResultsFetchRequest = CDSearchResults.searchResultsFetchRequest()
+        do {
+            let fetchedSearchResults = try context.fetch(searchResultsFetchRequest)
+            fetchedSearchResults.forEach { context.delete($0) }
+            saveContext()
+        } catch {
+            fatalError("Failed to fetch CDSearchResults objects")
+        }
     }
 
     private func saveContext() {
@@ -62,5 +88,4 @@ class CoreDataDataSource: DataSource {
             fatalError("Error saving context: \(error)")
         }
     }
-
 }

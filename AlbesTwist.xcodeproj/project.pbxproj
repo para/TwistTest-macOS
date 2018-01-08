@@ -13,6 +13,9 @@
 		729090552003BB0100CA01D7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729090542003BB0100CA01D7 /* DataSource.swift */; };
 		729090572003BC2700CA01D7 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729090562003BC2700CA01D7 /* CoreDataDataSource.swift */; };
 		7290905A2003C24600CA01D7 /* CDLoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729090582003C24600CA01D7 /* CDLoggedUser.swift */; };
+		729090602003D35700CA01D7 /* CDSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290905C2003D35700CA01D7 /* CDSearchResults.swift */; };
+		729090622003D35700CA01D7 /* CDResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290905E2003D35700CA01D7 /* CDResultItem.swift */; };
+		729090692003D6FA00CA01D7 /* ResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729090682003D6FA00CA01D7 /* ResultItem.swift */; };
 		72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C2200127BA00DEF997 /* AppDelegate.swift */; };
 		72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C4200127BA00DEF997 /* MainViewController.swift */; };
 		72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C6200127BA00DEF997 /* AlbesTwist.xcdatamodeld */; };
@@ -57,6 +60,9 @@
 		729090542003BB0100CA01D7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		729090562003BC2700CA01D7 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 		729090582003C24600CA01D7 /* CDLoggedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDLoggedUser.swift; sourceTree = "<group>"; };
+		7290905C2003D35700CA01D7 /* CDSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSearchResults.swift; sourceTree = "<group>"; };
+		7290905E2003D35700CA01D7 /* CDResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDResultItem.swift; sourceTree = "<group>"; };
+		729090682003D6FA00CA01D7 /* ResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultItem.swift; sourceTree = "<group>"; };
 		72E1B5BF200127B900DEF997 /* AlbesTwist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbesTwist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E1B5C2200127BA00DEF997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72E1B5C4200127BA00DEF997 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 				729090532003BAEE00CA01D7 /* DataSource */,
 				7290904F2003B5BB00CA01D7 /* LoggedUser.swift */,
 				729090512003B89600CA01D7 /* SearchResults.swift */,
+				729090682003D6FA00CA01D7 /* ResultItem.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -144,6 +151,8 @@
 				729090542003BB0100CA01D7 /* DataSource.swift */,
 				729090562003BC2700CA01D7 /* CoreDataDataSource.swift */,
 				729090582003C24600CA01D7 /* CDLoggedUser.swift */,
+				7290905C2003D35700CA01D7 /* CDSearchResults.swift */,
+				7290905E2003D35700CA01D7 /* CDResultItem.swift */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -360,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */,
+				729090602003D35700CA01D7 /* CDSearchResults.swift in Sources */,
 				72E1B6052002E56300DEF997 /* Request.swift in Sources */,
 				72E1B6072002E63800DEF997 /* UsersRequest.swift in Sources */,
 				729090572003BC2700CA01D7 /* CoreDataDataSource.swift in Sources */,
@@ -369,8 +379,10 @@
 				72E1B60020027C7E00DEF997 /* MainCoordinator.swift in Sources */,
 				72E1B602200283E900DEF997 /* LoginCoordinator.swift in Sources */,
 				72E1B6112002EB6200DEF997 /* Backend.swift in Sources */,
+				729090692003D6FA00CA01D7 /* ResultItem.swift in Sources */,
 				72E1B60F2002EAF100DEF997 /* Result.swift in Sources */,
 				72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */,
+				729090622003D35700CA01D7 /* CDResultItem.swift in Sources */,
 				72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */,
 				72E1B6132002EBBF00DEF997 /* StagingBackend.swift in Sources */,
 				729090552003BB0100CA01D7 /* DataSource.swift in Sources */,

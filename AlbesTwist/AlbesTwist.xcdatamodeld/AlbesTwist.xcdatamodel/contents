@@ -5,7 +5,20 @@
         <attribute name="timeZone" attributeType="String" syncable="YES"/>
         <attribute name="token" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="CDResultItem" representedClassName="CDResultItem" syncable="YES">
+        <attribute name="contents" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="ts" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="search" maxCount="1" deletionRule="Nullify" destinationEntity="CDSearchResults" inverseName="items" inverseEntity="CDSearchResults" syncable="YES"/>
+    </entity>
+    <entity name="CDSearchResults" representedClassName="CDSearchResults" syncable="YES">
+        <attribute name="query" attributeType="String" syncable="YES"/>
+        <attribute name="ts" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDResultItem" inverseName="search" inverseEntity="CDResultItem" syncable="YES"/>
+    </entity>
     <elements>
         <element name="CDLoggedUser" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="CDSearchResults" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="CDResultItem" positionX="-36" positionY="36" width="128" height="105"/>
     </elements>
 </model>
