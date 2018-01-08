@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7290904B2003865200CA01D7 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290904A2003865200CA01D7 /* SearchResponse.swift */; };
+		729090502003B5BB00CA01D7 /* LoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290904F2003B5BB00CA01D7 /* LoggedUser.swift */; };
+		729090522003B89600CA01D7 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729090512003B89600CA01D7 /* SearchResults.swift */; };
 		72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C2200127BA00DEF997 /* AppDelegate.swift */; };
 		72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C4200127BA00DEF997 /* MainViewController.swift */; };
 		72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C6200127BA00DEF997 /* AlbesTwist.xcdatamodeld */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		7290904A2003865200CA01D7 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		7290904F2003B5BB00CA01D7 /* LoggedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUser.swift; sourceTree = "<group>"; };
+		729090512003B89600CA01D7 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		72E1B5BF200127B900DEF997 /* AlbesTwist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbesTwist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E1B5C2200127BA00DEF997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72E1B5C4200127BA00DEF997 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,15 @@
 			name = Response;
 			sourceTree = "<group>";
 		};
+		7290904E2003B2F800CA01D7 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				7290904F2003B5BB00CA01D7 /* LoggedUser.swift */,
+				729090512003B89600CA01D7 /* SearchResults.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		72E1B5B6200127B900DEF997 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +156,7 @@
 			children = (
 				72E1B6032002E50D00DEF997 /* Backend */,
 				72E1B5FA200273A800DEF997 /* Coordinators */,
+				7290904E2003B2F800CA01D7 /* DataModel */,
 				72E1B5C2200127BA00DEF997 /* AppDelegate.swift */,
 				72E1B5C4200127BA00DEF997 /* MainViewController.swift */,
 				72E1B5FD20027B2400DEF997 /* LoginViewController.swift */,
@@ -331,6 +345,7 @@
 				72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */,
 				72E1B6052002E56300DEF997 /* Request.swift in Sources */,
 				72E1B6072002E63800DEF997 /* UsersRequest.swift in Sources */,
+				729090522003B89600CA01D7 /* SearchResults.swift in Sources */,
 				72E1B6092002E8CD00DEF997 /* SearchRequest.swift in Sources */,
 				72E1B60020027C7E00DEF997 /* MainCoordinator.swift in Sources */,
 				72E1B602200283E900DEF997 /* LoginCoordinator.swift in Sources */,
@@ -340,6 +355,7 @@
 				72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */,
 				72E1B6132002EBBF00DEF997 /* StagingBackend.swift in Sources */,
 				7290904B2003865200CA01D7 /* SearchResponse.swift in Sources */,
+				729090502003B5BB00CA01D7 /* LoggedUser.swift in Sources */,
 				72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */,
 				72E1B60D2002EAB700DEF997 /* LoginResponse.swift in Sources */,
 				72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */,
