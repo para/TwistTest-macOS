@@ -24,6 +24,7 @@
 		72E1B60D2002EAB700DEF997 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B60C2002EAB700DEF997 /* LoginResponse.swift */; };
 		72E1B60F2002EAF100DEF997 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B60E2002EAF100DEF997 /* Result.swift */; };
 		72E1B6112002EB6200DEF997 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B6102002EB6200DEF997 /* Backend.swift */; };
+		72E1B6132002EBBF00DEF997 /* StagingBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B6122002EBBF00DEF997 /* StagingBackend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		72E1B60C2002EAB700DEF997 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		72E1B60E2002EAF100DEF997 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		72E1B6102002EB6200DEF997 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		72E1B6122002EBBF00DEF997 /* StagingBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagingBackend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				72E1B60C2002EAB700DEF997 /* LoginResponse.swift */,
 				72E1B60E2002EAF100DEF997 /* Result.swift */,
 				72E1B6102002EB6200DEF997 /* Backend.swift */,
+				72E1B6122002EBBF00DEF997 /* StagingBackend.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				72E1B60F2002EAF100DEF997 /* Result.swift in Sources */,
 				72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */,
 				72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */,
+				72E1B6132002EBBF00DEF997 /* StagingBackend.swift in Sources */,
 				72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */,
 				72E1B60D2002EAB700DEF997 /* LoginResponse.swift in Sources */,
 				72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */,
