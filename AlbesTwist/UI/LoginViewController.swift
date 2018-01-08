@@ -7,6 +7,7 @@ protocol LoginViewControllerDelegate: class {
 class LoginViewController: NSViewController {
     @IBOutlet var emailField: NSTextField!
     @IBOutlet var passwordField: NSTextField!
+    @IBOutlet var spinner: NSProgressIndicator!
 
     var presenter: LoginPresenter!
     weak var delegate: LoginViewControllerDelegate?
@@ -14,6 +15,7 @@ class LoginViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         preferredContentSize = NSSize(width: 400.0, height: 200.0)
+        spinner.isHidden = true
 
         presenter.attach(loginView: self)
     }
@@ -35,11 +37,17 @@ protocol LoginView: class {
 
 extension LoginViewController: LoginView {
     func showLoading() {
-
+        DispatchQueue.main.async {
+            self.spinner.isHidden = false
+            self.spinner.startAnimation(self)
+        }
     }
 
     func hideLoading() {
-        
+        DispatchQueue.main.async {
+            self.spinner.isHidden = true
+            self.spinner.stopAnimation(self)
+        }
     }
 
     func showLoginSuccess() {

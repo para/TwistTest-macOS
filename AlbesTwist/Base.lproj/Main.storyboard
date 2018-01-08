@@ -211,17 +211,22 @@
                                     <action selector="loginButtonPushed:" target="9gf-Hj-Awd" id="fO1-Zo-3Jr"/>
                                 </connections>
                             </button>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="dMW-1V-AAU">
+                                <rect key="frame" x="270" y="33" width="16" height="16"/>
+                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="bdA-ZK-FcW" secondAttribute="bottom" constant="30" id="1Ez-28-69g"/>
                             <constraint firstItem="Kg4-97-e8N" firstAttribute="height" secondItem="BQU-BB-8at" secondAttribute="height" id="57A-oh-L7p"/>
                             <constraint firstItem="I6h-Kg-aew" firstAttribute="top" secondItem="8jh-bl-S9N" secondAttribute="top" constant="20" symbolic="YES" id="5kf-6h-OgJ"/>
                             <constraint firstItem="bdA-ZK-FcW" firstAttribute="centerX" secondItem="Kg4-97-e8N" secondAttribute="centerX" id="7Rp-Ui-obw"/>
+                            <constraint firstItem="dMW-1V-AAU" firstAttribute="leading" secondItem="bdA-ZK-FcW" secondAttribute="trailing" constant="20" id="8kX-iY-DpM"/>
                             <constraint firstAttribute="trailing" secondItem="BQU-BB-8at" secondAttribute="trailing" constant="20" id="EPW-ym-wBf"/>
                             <constraint firstAttribute="trailing" secondItem="I6h-Kg-aew" secondAttribute="trailing" constant="20" symbolic="YES" id="F3d-hW-OQV"/>
                             <constraint firstItem="I6h-Kg-aew" firstAttribute="leading" secondItem="8jh-bl-S9N" secondAttribute="leading" constant="20" symbolic="YES" id="a0i-uO-kiF"/>
                             <constraint firstItem="Kg4-97-e8N" firstAttribute="top" secondItem="BQU-BB-8at" secondAttribute="bottom" constant="15" id="aeA-zO-tkZ"/>
                             <constraint firstItem="Kg4-97-e8N" firstAttribute="centerX" secondItem="BQU-BB-8at" secondAttribute="centerX" id="cnC-dq-Dkw"/>
+                            <constraint firstItem="dMW-1V-AAU" firstAttribute="centerY" secondItem="bdA-ZK-FcW" secondAttribute="centerY" id="ePZ-Kw-yHX"/>
                             <constraint firstItem="BQU-BB-8at" firstAttribute="top" secondItem="I6h-Kg-aew" secondAttribute="bottom" constant="20" id="jej-xM-pvV"/>
                             <constraint firstItem="BQU-BB-8at" firstAttribute="leading" secondItem="8jh-bl-S9N" secondAttribute="leading" constant="20" id="vOa-r5-dkg"/>
                             <constraint firstItem="Kg4-97-e8N" firstAttribute="width" secondItem="BQU-BB-8at" secondAttribute="width" id="w50-EK-pac"/>
@@ -230,6 +235,7 @@
                     <connections>
                         <outlet property="emailField" destination="BQU-BB-8at" id="3aR-x4-26O"/>
                         <outlet property="passwordField" destination="Kg4-97-e8N" id="Ytq-M5-rN7"/>
+                        <outlet property="spinner" destination="dMW-1V-AAU" id="aeI-sh-YNO"/>
                     </connections>
                 </viewController>
                 <customObject id="0qI-5O-maA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
