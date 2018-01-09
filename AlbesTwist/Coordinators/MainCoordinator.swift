@@ -6,7 +6,8 @@ class MainCoordinator: Coordinator {
     private var dataSource = CoreDataDataSource()
 
     private enum Constants {
-        static let mainSceneID = NSStoryboard.SceneIdentifier("MainWindow")
+        static let mainWindowID = NSStoryboard.SceneIdentifier("MainWindow")
+        static let mainViewControllerID = NSStoryboard.SceneIdentifier("MainController")
     }
 
     func start() {
@@ -22,10 +23,10 @@ class MainCoordinator: Coordinator {
     private func showMainUI() {
         let storyboard = getMainStoryboard()
 
-        let mainController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("MainController")) as! MainViewController
+        let mainController = storyboard.instantiateController(withIdentifier: Constants.mainViewControllerID) as! MainViewController
         mainController.presenter = MainViewPresenter(dataSource: CoreDataDataSource(), backend: StagingBackend())
 
-        mainWindow = storyboard.instantiateController(withIdentifier: Constants.mainSceneID) as! NSWindowController
+        mainWindow = storyboard.instantiateController(withIdentifier: Constants.mainWindowID) as! NSWindowController
         mainWindow.contentViewController = mainController
         mainWindow.window?.contentMinSize = NSSize(width: 420.0, height: 220.0)
         mainWindow.window?.center()

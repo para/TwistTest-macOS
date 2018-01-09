@@ -20,12 +20,13 @@
 		729091192004CC5600CA01D7 /* ResultItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729091182004CC5600CA01D7 /* ResultItemCell.swift */; };
 		7290911D2004FA8000CA01D7 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290911C2004FA8000CA01D7 /* MainViewPresenter.swift */; };
 		7290911F2005032F00CA01D7 /* Spinnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290911E2005032F00CA01D7 /* Spinnable.swift */; };
+		729091242005550C00CA01D7 /* MockDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729091232005550C00CA01D7 /* MockDataSource.swift */; };
 		72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C2200127BA00DEF997 /* AppDelegate.swift */; };
 		72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C4200127BA00DEF997 /* MainViewController.swift */; };
 		72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C6200127BA00DEF997 /* AlbesTwist.xcdatamodeld */; };
 		72E1B5CA200127BA00DEF997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E1B5C9200127BA00DEF997 /* Assets.xcassets */; };
 		72E1B5CD200127BA00DEF997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E1B5CB200127BA00DEF997 /* Main.storyboard */; };
-		72E1B5D9200127BA00DEF997 /* AlbesTwistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5D8200127BA00DEF997 /* AlbesTwistTests.swift */; };
+		72E1B5D9200127BA00DEF997 /* MainViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5D8200127BA00DEF997 /* MainViewPresenterTests.swift */; };
 		72E1B5E4200127BA00DEF997 /* AlbesTwistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5E3200127BA00DEF997 /* AlbesTwistUITests.swift */; };
 		72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FB200273B800DEF997 /* Coordinator.swift */; };
 		72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5FD20027B2400DEF997 /* LoginViewController.swift */; };
@@ -71,6 +72,7 @@
 		729091182004CC5600CA01D7 /* ResultItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultItemCell.swift; sourceTree = "<group>"; };
 		7290911C2004FA8000CA01D7 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 		7290911E2005032F00CA01D7 /* Spinnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinnable.swift; sourceTree = "<group>"; };
+		729091232005550C00CA01D7 /* MockDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataSource.swift; sourceTree = "<group>"; };
 		72E1B5BF200127B900DEF997 /* AlbesTwist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbesTwist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E1B5C2200127BA00DEF997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72E1B5C4200127BA00DEF997 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 		72E1B5CE200127BA00DEF997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72E1B5CF200127BA00DEF997 /* AlbesTwist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlbesTwist.entitlements; sourceTree = "<group>"; };
 		72E1B5D4200127BA00DEF997 /* AlbesTwistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbesTwistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		72E1B5D8200127BA00DEF997 /* AlbesTwistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbesTwistTests.swift; sourceTree = "<group>"; };
+		72E1B5D8200127BA00DEF997 /* MainViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenterTests.swift; sourceTree = "<group>"; };
 		72E1B5DA200127BA00DEF997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72E1B5DF200127BA00DEF997 /* AlbesTwistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbesTwistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E1B5E3200127BA00DEF997 /* AlbesTwistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbesTwistUITests.swift; sourceTree = "<group>"; };
@@ -156,11 +158,9 @@
 		729090532003BAEE00CA01D7 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				72909122200554E300CA01D7 /* CoreData */,
 				729090542003BB0100CA01D7 /* DataSource.swift */,
-				729090562003BC2700CA01D7 /* CoreDataDataSource.swift */,
-				729090582003C24600CA01D7 /* CDLoggedUser.swift */,
-				7290905C2003D35700CA01D7 /* CDSearchResults.swift */,
-				7290905E2003D35700CA01D7 /* CDResultItem.swift */,
+				729091232005550C00CA01D7 /* MockDataSource.swift */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -192,6 +192,17 @@
 				7290911C2004FA8000CA01D7 /* MainViewPresenter.swift */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		72909122200554E300CA01D7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				729090562003BC2700CA01D7 /* CoreDataDataSource.swift */,
+				729090582003C24600CA01D7 /* CDLoggedUser.swift */,
+				7290905C2003D35700CA01D7 /* CDSearchResults.swift */,
+				7290905E2003D35700CA01D7 /* CDResultItem.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		72E1B5B6200127B900DEF997 = {
@@ -234,7 +245,7 @@
 		72E1B5D7200127BA00DEF997 /* AlbesTwistTests */ = {
 			isa = PBXGroup;
 			children = (
-				72E1B5D8200127BA00DEF997 /* AlbesTwistTests.swift */,
+				72E1B5D8200127BA00DEF997 /* MainViewPresenterTests.swift */,
 				72E1B5DA200127BA00DEF997 /* Info.plist */,
 			);
 			path = AlbesTwistTests;
@@ -404,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				729091242005550C00CA01D7 /* MockDataSource.swift in Sources */,
 				7290906C200410E600CA01D7 /* LoginViewPresenter.swift in Sources */,
 				72E1B5FC200273B800DEF997 /* Coordinator.swift in Sources */,
 				729090602003D35700CA01D7 /* CDSearchResults.swift in Sources */,
@@ -438,7 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72E1B5D9200127BA00DEF997 /* AlbesTwistTests.swift in Sources */,
+				72E1B5D9200127BA00DEF997 /* MainViewPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@ class MainViewPresenter: MainPresenter {
     private var searchResults: SearchResults?
     private var loggedUser: LoggedUser?
 
-    private let formatter: DateFormatter = {
+    let formatter: DateFormatter = {
         let df = DateFormatter()
         df.dateFormat = "dd.MM.yyyy"
         return df
