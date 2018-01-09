@@ -4,6 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -402,43 +403,57 @@
                                                             <rect key="frame" x="1" y="1" width="597" height="90"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
+                                                                <box boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="tpt-92-iMW">
+                                                                    <rect key="frame" x="30" y="0.0" width="567" height="2"/>
+                                                                    <view key="contentView" id="vjr-Ru-SF6">
+                                                                        <rect key="frame" x="1" y="1" width="565" height="0.0"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    </view>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="2" id="Udh-VY-747"/>
+                                                                    </constraints>
+                                                                    <color key="fillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </box>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F0L-6M-3eL" userLabel="Title Label">
-                                                                    <rect key="frame" x="8" y="63" width="491" height="17"/>
+                                                                    <rect key="frame" x="28" y="62" width="461" height="18"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" placeholderString="Title" id="HHh-kP-vwV">
-                                                                        <font key="font" metaFont="system"/>
+                                                                        <font key="font" metaFont="systemMedium" size="14"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vIb-Ei-2BR" userLabel="Date Label">
-                                                                    <rect key="frame" x="505" y="63" width="84" height="17"/>
+                                                                    <rect key="frame" x="495" y="62" width="84" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="80" id="GRj-f3-WLD"/>
                                                                     </constraints>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Date" id="Im5-Ve-XVC">
                                                                         <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="textColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vav-p7-n04" userLabel="Contents Label">
-                                                                    <rect key="frame" x="8" y="10" width="581" height="36"/>
+                                                                    <rect key="frame" x="28" y="12" width="551" height="36"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="36" id="ZQi-0o-yr9"/>
                                                                     </constraints>
                                                                     <textFieldCell key="cell" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" placeholderString="Contents" id="BjO-g9-rCp">
                                                                         <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="textColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="vIb-Ei-2BR" secondAttribute="trailing" constant="10" id="0N9-r6-e7G"/>
-                                                                <constraint firstAttribute="bottom" secondItem="Vav-p7-n04" secondAttribute="bottom" constant="10" id="75p-Fh-Moc"/>
+                                                                <constraint firstAttribute="trailing" secondItem="vIb-Ei-2BR" secondAttribute="trailing" constant="20" id="0N9-r6-e7G"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Vav-p7-n04" secondAttribute="bottom" constant="12" id="75p-Fh-Moc"/>
                                                                 <constraint firstItem="F0L-6M-3eL" firstAttribute="top" secondItem="j6o-60-gMg" secondAttribute="top" constant="10" id="8Go-DJ-4Mc"/>
-                                                                <constraint firstItem="F0L-6M-3eL" firstAttribute="leading" secondItem="j6o-60-gMg" secondAttribute="leading" constant="10" id="EbT-hr-Jor"/>
+                                                                <constraint firstAttribute="trailing" secondItem="tpt-92-iMW" secondAttribute="trailing" id="99e-Dq-c8b"/>
+                                                                <constraint firstItem="F0L-6M-3eL" firstAttribute="leading" secondItem="j6o-60-gMg" secondAttribute="leading" constant="30" id="EbT-hr-Jor"/>
                                                                 <constraint firstItem="vIb-Ei-2BR" firstAttribute="baseline" secondItem="F0L-6M-3eL" secondAttribute="baseline" id="bRb-JQ-NYX"/>
+                                                                <constraint firstAttribute="bottom" secondItem="tpt-92-iMW" secondAttribute="bottom" id="ggM-rD-zB4"/>
+                                                                <constraint firstItem="tpt-92-iMW" firstAttribute="leading" secondItem="F0L-6M-3eL" secondAttribute="leading" id="gyX-3S-Qg0"/>
                                                                 <constraint firstItem="vIb-Ei-2BR" firstAttribute="leading" secondItem="F0L-6M-3eL" secondAttribute="trailing" constant="10" id="h6M-ZZ-H0j"/>
                                                                 <constraint firstItem="Vav-p7-n04" firstAttribute="trailing" secondItem="vIb-Ei-2BR" secondAttribute="trailing" id="v5U-tH-4Oh"/>
                                                                 <constraint firstItem="Vav-p7-n04" firstAttribute="leading" secondItem="F0L-6M-3eL" secondAttribute="leading" id="xtp-JO-0ue"/>
