@@ -56,6 +56,11 @@ class MainViewPresenter: MainPresenter {
     }
 
     func doSearch(query: String) {
+        // Ignore empty queries
+        guard query.count > 0 else {
+            return
+        }
+
         if loggedUser == nil {
             loggedUser = dataSource.getLoggedUser()
             if loggedUser == nil {
