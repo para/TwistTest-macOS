@@ -491,30 +491,30 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I6h-Kg-aew">
-                                <rect key="frame" x="18" y="158" width="364" height="22"/>
+                                <rect key="frame" x="18" y="154" width="364" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="Ydx-Qo-bJf"/>
+                                    <constraint firstAttribute="height" constant="26" id="Ydx-Qo-bJf"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please login" id="XCs-A1-Vwi">
-                                    <font key="font" metaFont="system"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Log in to Albe's Twist" id="XCs-A1-Vwi">
+                                    <font key="font" size="15" name="SFUIDisplay-Medium"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BQU-BB-8at">
-                                <rect key="frame" x="20" y="116" width="360" height="22"/>
+                                <rect key="frame" x="20" y="108" width="360" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="8NQ-Qv-RtS"/>
+                                    <constraint firstAttribute="height" constant="26" id="8NQ-Qv-RtS"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Email" drawsBackground="YES" id="V1B-an-MXV">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Email" bezelStyle="round" id="V1B-an-MXV">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kg4-97-e8N">
-                                <rect key="frame" x="20" y="79" width="360" height="22"/>
-                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="iWS-7R-ulb">
+                                <rect key="frame" x="20" y="72" width="360" height="26"/>
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" usesSingleLineMode="YES" bezelStyle="round" id="iWS-7R-ulb">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -529,7 +529,7 @@
                                     <constraint firstAttribute="height" constant="22" id="Li8-KS-PX6"/>
                                     <constraint firstAttribute="width" constant="100" id="kcj-3r-PBK"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ndC-JR-pgQ">
+                                <buttonCell key="cell" type="push" title="Log in" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ndC-JR-pgQ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -550,7 +550,7 @@
                             <constraint firstAttribute="trailing" secondItem="BQU-BB-8at" secondAttribute="trailing" constant="20" id="EPW-ym-wBf"/>
                             <constraint firstAttribute="trailing" secondItem="I6h-Kg-aew" secondAttribute="trailing" constant="20" symbolic="YES" id="F3d-hW-OQV"/>
                             <constraint firstItem="I6h-Kg-aew" firstAttribute="leading" secondItem="8jh-bl-S9N" secondAttribute="leading" constant="20" symbolic="YES" id="a0i-uO-kiF"/>
-                            <constraint firstItem="Kg4-97-e8N" firstAttribute="top" secondItem="BQU-BB-8at" secondAttribute="bottom" constant="15" id="aeA-zO-tkZ"/>
+                            <constraint firstItem="Kg4-97-e8N" firstAttribute="top" secondItem="BQU-BB-8at" secondAttribute="bottom" constant="10" id="aeA-zO-tkZ"/>
                             <constraint firstItem="Kg4-97-e8N" firstAttribute="centerX" secondItem="BQU-BB-8at" secondAttribute="centerX" id="cnC-dq-Dkw"/>
                             <constraint firstItem="dMW-1V-AAU" firstAttribute="centerY" secondItem="bdA-ZK-FcW" secondAttribute="centerY" id="ePZ-Kw-yHX"/>
                             <constraint firstItem="BQU-BB-8at" firstAttribute="top" secondItem="I6h-Kg-aew" secondAttribute="bottom" constant="20" id="jej-xM-pvV"/>
