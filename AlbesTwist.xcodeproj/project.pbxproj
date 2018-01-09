@@ -21,6 +21,7 @@
 		7290911D2004FA8000CA01D7 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290911C2004FA8000CA01D7 /* MainViewPresenter.swift */; };
 		7290911F2005032F00CA01D7 /* Spinnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290911E2005032F00CA01D7 /* Spinnable.swift */; };
 		729091242005550C00CA01D7 /* MockDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729091232005550C00CA01D7 /* MockDataSource.swift */; };
+		7290912620055B3500CA01D7 /* MockBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290912520055B3500CA01D7 /* MockBackend.swift */; };
 		72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C2200127BA00DEF997 /* AppDelegate.swift */; };
 		72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C4200127BA00DEF997 /* MainViewController.swift */; };
 		72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C6200127BA00DEF997 /* AlbesTwist.xcdatamodeld */; };
@@ -73,6 +74,7 @@
 		7290911C2004FA8000CA01D7 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 		7290911E2005032F00CA01D7 /* Spinnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinnable.swift; sourceTree = "<group>"; };
 		729091232005550C00CA01D7 /* MockDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataSource.swift; sourceTree = "<group>"; };
+		7290912520055B3500CA01D7 /* MockBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBackend.swift; sourceTree = "<group>"; };
 		72E1B5BF200127B900DEF997 /* AlbesTwist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbesTwist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E1B5C2200127BA00DEF997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72E1B5C4200127BA00DEF997 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				72E1B60E2002EAF100DEF997 /* Result.swift */,
 				72E1B6102002EB6200DEF997 /* Backend.swift */,
 				72E1B6122002EBBF00DEF997 /* StagingBackend.swift */,
+				7290912520055B3500CA01D7 /* MockBackend.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				72E1B6132002EBBF00DEF997 /* StagingBackend.swift in Sources */,
 				729090552003BB0100CA01D7 /* DataSource.swift in Sources */,
 				7290904B2003865200CA01D7 /* SearchResponse.swift in Sources */,
+				7290912620055B3500CA01D7 /* MockBackend.swift in Sources */,
 				729090502003B5BB00CA01D7 /* LoggedUser.swift in Sources */,
 				72E1B5FE20027B2400DEF997 /* LoginViewController.swift in Sources */,
 				72E1B60D2002EAB700DEF997 /* LoginResponse.swift in Sources */,

@@ -4,6 +4,7 @@ import XCTest
 class MainViewPresenterTests: XCTestCase {
 
     let dataSource = MockDataSource()
+    let backend = MockBackend()
     
     override func setUp() {
         super.setUp()
@@ -24,7 +25,7 @@ class MainViewPresenterTests: XCTestCase {
     }
 
     func testConfigureCell() {
-        let presenter = MainViewPresenter(dataSource: dataSource, backend: StagingBackend())
+        let presenter = MainViewPresenter(dataSource: dataSource, backend: backend)
 
         let mainVC = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("MainController")) as! MainViewController
         mainVC.presenter = presenter
@@ -40,6 +41,22 @@ class MainViewPresenterTests: XCTestCase {
         XCTAssertEqual(cell.titleLabel.stringValue, searchResults.items[row].title)
         XCTAssertEqual(cell.contentsLabel.stringValue, searchResults.items[row].contents)
         XCTAssertEqual(cell.dateLabel.stringValue, presenter.formatter.string(from: searchResults.items[row].ts))
+    }
+
+    func testSearch() {
+        let presenter = MainViewPresenter(dataSource: dataSource, backend: backend)
+
+        dataSource.deleteSearchResults()
+        let resultCount = 3
+        backend.expectedResults = 3
+        let query = "This is my query"
+
+        presenter.doSearch(query: query)
+
+        let searchResults = dataSource.getSearchResults()
+        XCTAssertNotNil(searchResults)
+        XCTAssertEqual(searchResults!.query, query)
+        XCTAssertEqual(searchResults!.items.count, resultCount)
     }
     
 }
