@@ -39,9 +39,7 @@ extension MainViewController: NSTableViewDelegate {
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = tableView.makeView(withIdentifier: Constants.resultCellID, owner: nil) as! ResultItemCell
 
-        DispatchQueue.main.async {
-            self.presenter.configure(cell: cell, forRow: row)
-        }
+        self.presenter.configure(cell: cell, forRow: row)
 
         return cell
     }
@@ -52,6 +50,7 @@ extension MainViewController: NSTableViewDelegate {
 protocol MainView: class {
     func showLoading()
     func hideLoading()
+    func showQuery(text: String)
     func showResults()
     func showSearchError(errorText: String)
 }
@@ -64,6 +63,12 @@ extension MainViewController: MainView {
 
     func hideLoading() {
         stopSpinning()
+    }
+
+    func showQuery(text: String) {
+        DispatchQueue.main.async {
+            self.searchField.stringValue = text
+        }
     }
 
     func showResults() {

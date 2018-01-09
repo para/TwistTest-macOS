@@ -42,6 +42,10 @@ class MainViewPresenter: MainPresenter {
 
     func preloadMainView() {
         mainView?.showResults()
+
+        if let lastQuery = searchResults?.query {
+            mainView?.showQuery(text: lastQuery)
+        }
     }
 
     func configure(cell: ResultItemCell, forRow row: Int) {
