@@ -32,8 +32,6 @@ class MainViewPresenter: MainPresenter {
     required init(dataSource: DataSource, backend: Backend) {
         self.dataSource = dataSource
         self.backend = backend
-
-        self.searchResults = dataSource.getSearchResults()
     }
 
     func attach(mainView: MainView) {
@@ -41,10 +39,17 @@ class MainViewPresenter: MainPresenter {
     }
 
     func preloadMainView() {
+        self.searchResults = dataSource.getSearchResults()
+        self.loggedUser = dataSource.getLoggedUser()
+
         mainView?.showResults()
 
         if let lastQuery = searchResults?.query {
             mainView?.showQuery(text: lastQuery)
+        }
+
+        if let loggedUser = loggedUser {
+            mainView?.showLoggedUser(name: loggedUser.name)
         }
     }
 

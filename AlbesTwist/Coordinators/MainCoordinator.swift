@@ -48,5 +48,9 @@ class MainCoordinator: Coordinator {
 extension MainCoordinator: LoginCoordinatorDelegate {
     func coordinatorDidLogin(_ coordinator: LoginCoordinator) {
         removeChild(coordinator: coordinator)
+
+        if let vc = mainWindow.contentViewController as? MainViewController {
+            vc.didLogin()
+        }
     }
 }

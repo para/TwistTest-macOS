@@ -4,6 +4,7 @@ class MainViewController: NSViewController, Spinnable {
     @IBOutlet var spinner: NSProgressIndicator!
     @IBOutlet var searchField: NSSearchField!
     @IBOutlet var tableView: NSTableView!
+    @IBOutlet var loggedUserLabel: NSTextField!
 
     var presenter: MainPresenter!
 
@@ -17,6 +18,10 @@ class MainViewController: NSViewController, Spinnable {
         spinner.isHidden = true
 
         presenter.attach(mainView: self)
+        presenter.preloadMainView()
+    }
+
+    func didLogin() {
         presenter.preloadMainView()
     }
 
@@ -53,6 +58,7 @@ protocol MainView: class {
     func showQuery(text: String)
     func showResults()
     func showSearchError(errorText: String)
+    func showLoggedUser(name: String)
 }
 
 extension MainViewController: MainView {
@@ -86,6 +92,12 @@ extension MainViewController: MainView {
 
         DispatchQueue.main.async {
             alert.runModal()
+        }
+    }
+
+    func showLoggedUser(name: String) {
+        DispatchQueue.main.async {
+            self.loggedUserLabel.stringValue = name
         }
     }
 }

@@ -356,6 +356,20 @@
                                 <view key="contentView" id="fHz-bb-ipL">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="26"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e1z-II-ToZ">
+                                            <rect key="frame" x="588" y="4" width="4" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="PIV-3h-7fN">
+                                                <font key="font" metaFont="systemMedium" size="13"/>
+                                                <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="e1z-II-ToZ" firstAttribute="centerY" secondItem="fHz-bb-ipL" secondAttribute="centerY" id="6yz-VB-IMx"/>
+                                        <constraint firstAttribute="trailing" secondItem="e1z-II-ToZ" secondAttribute="trailing" constant="10" id="HcG-Hd-UHR"/>
+                                    </constraints>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="30V-le-3jY"/>
@@ -503,6 +517,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loggedUserLabel" destination="e1z-II-ToZ" id="8c3-Iw-vsd"/>
                         <outlet property="searchField" destination="RqI-LR-dMx" id="UPi-8h-JKK"/>
                         <outlet property="spinner" destination="9iU-Gf-T6j" id="oKg-iI-kkM"/>
                         <outlet property="tableView" destination="fjI-5p-0Wg" id="wsR-hZ-dwR"/>
