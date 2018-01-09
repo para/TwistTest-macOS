@@ -2,6 +2,7 @@ import Cocoa
 
 class MainViewController: NSViewController, Spinnable {
     @IBOutlet var spinner: NSProgressIndicator!
+    @IBOutlet var searchField: NSSearchField!
     @IBOutlet var tableView: NSTableView!
 
     var presenter: MainPresenter!
@@ -19,6 +20,9 @@ class MainViewController: NSViewController, Spinnable {
         presenter.preloadMainView()
     }
 
+    @IBAction func didStartSearch(_ sender: Any) {
+        presenter.doSearch(query: searchField.stringValue)
+    }
 }
 
 extension MainViewController: NSTableViewDataSource {
@@ -34,6 +38,11 @@ extension MainViewController: NSTableViewDataSource {
 extension MainViewController: NSTableViewDelegate {
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = tableView.makeView(withIdentifier: Constants.resultCellID, owner: nil) as! ResultItemCell
+
+        DispatchQueue.main.async {
+            self.presenter.configure(cell: cell, forRow: row)
+        }
+
         return cell
     }
 }
@@ -58,7 +67,9 @@ extension MainViewController: MainView {
     }
 
     func showResults() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     func showSearchError(errorText: String) {

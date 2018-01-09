@@ -351,11 +351,14 @@
                         <subviews>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqI-LR-dMx">
                                 <rect key="frame" x="20" y="358" width="560" height="22"/>
-                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="cIO-Rv-yhT">
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" sendsWholeSearchString="YES" id="cIO-Rv-yhT">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </searchFieldCell>
+                                <connections>
+                                    <action selector="didStartSearch:" target="XfG-lQ-9wD" id="0fm-QJ-yRw"/>
+                                </connections>
                             </searchField>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="82" horizontalPageScroll="10" verticalLineScroll="82" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTZ-Gi-sTs">
                                 <rect key="frame" x="20" y="20" width="560" height="330"/>
@@ -370,7 +373,7 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="" width="555" minWidth="40" maxWidth="1000" id="fYh-vW-cdn" userLabel="Search Results Column">
+                                                <tableColumn identifier="" width="555" minWidth="40" maxWidth="1000000" id="fYh-vW-cdn" userLabel="Search Results Column">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -381,7 +384,7 @@
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
-                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="ResultItem" id="j6o-60-gMg" customClass="ResultItemCell" customModule="AlbesTwist" customModuleProvider="target">
                                                             <rect key="frame" x="1" y="1" width="555" height="80"/>
@@ -389,7 +392,7 @@
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F0L-6M-3eL" userLabel="Title Label">
                                                                     <rect key="frame" x="8" y="53" width="449" height="17"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title" id="HHh-kP-vwV">
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="Title" id="HHh-kP-vwV">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -400,7 +403,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="80" id="GRj-f3-WLD"/>
                                                                     </constraints>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="21.11.2017" id="Im5-Ve-XVC">
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Date" id="Im5-Ve-XVC">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -408,7 +411,7 @@
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vav-p7-n04" userLabel="Contents Label">
                                                                     <rect key="frame" x="8" y="10" width="539" height="17"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Contents" id="BjO-g9-rCp">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" placeholderString="Contents" id="BjO-g9-rCp">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -451,7 +454,7 @@
                                 </scroller>
                             </scrollView>
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="9iU-Gf-T6j">
-                                <rect key="frame" x="554" y="361" width="16" height="16"/>
+                                <rect key="frame" x="544" y="361" width="16" height="16"/>
                             </progressIndicator>
                         </subviews>
                         <constraints>
@@ -463,10 +466,11 @@
                             <constraint firstItem="RqI-LR-dMx" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="kTc-p2-U7H"/>
                             <constraint firstItem="xTZ-Gi-sTs" firstAttribute="trailing" secondItem="RqI-LR-dMx" secondAttribute="trailing" id="l8J-WZ-Z5d"/>
                             <constraint firstItem="RqI-LR-dMx" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="u9j-dK-UOH"/>
-                            <constraint firstItem="9iU-Gf-T6j" firstAttribute="trailing" secondItem="RqI-LR-dMx" secondAttribute="trailing" constant="-10" id="xDT-ce-Iyd"/>
+                            <constraint firstItem="9iU-Gf-T6j" firstAttribute="trailing" secondItem="RqI-LR-dMx" secondAttribute="trailing" constant="-20" id="xDT-ce-Iyd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchField" destination="RqI-LR-dMx" id="UPi-8h-JKK"/>
                         <outlet property="spinner" destination="9iU-Gf-T6j" id="oKg-iI-kkM"/>
                         <outlet property="tableView" destination="fjI-5p-0Wg" id="wsR-hZ-dwR"/>
                     </connections>
