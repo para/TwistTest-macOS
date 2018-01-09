@@ -84,6 +84,10 @@ class MainViewPresenter: MainPresenter {
                 for responseItem in searchResponse.items {
                     items.append(ResultItem(title: responseItem.title, contents: responseItem.snippet, ts: Date(timeIntervalSince1970: responseItem.ts)))
                 }
+                // Delete previous search results
+                self?.dataSource.deleteSearchResults()
+
+                // Save new search results
                 let searchResults = SearchResults(query: query, ts: Date(), items: items)
                 self?.searchResults = searchResults
                 self?.dataSource.saveSearchResults(searchResults)
