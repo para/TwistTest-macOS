@@ -3,6 +3,7 @@ import Cocoa
 class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     private var mainWindow: NSWindowController!
+    private var dataSource = CoreDataDataSource()
 
     private enum Constants {
         static let mainSceneID = NSStoryboard.SceneIdentifier("MainWindow")
@@ -34,7 +35,7 @@ class MainCoordinator: Coordinator {
     }
 
     private func isLoggedIn() -> Bool {
-        return false
+        return dataSource.getLoggedUser() != nil
     }
 
 }

@@ -21,6 +21,7 @@ class LoginCoordinator: Coordinator {
         let storyboard = getMainStoryboard()
         let loginVC = storyboard.instantiateController(withIdentifier: Constants.loginSceneID) as! LoginViewController
         loginVC.delegate = self
+        loginVC.presenter = LoginViewPresenter(dataSource: CoreDataDataSource(), backend: StagingBackend())
         windowController.contentViewController?
             .presentViewControllerAsSheet(loginVC)
     }
@@ -28,7 +29,9 @@ class LoginCoordinator: Coordinator {
 
 extension LoginCoordinator: LoginViewControllerDelegate {
     func didLogin(_ loginViewController: LoginViewController) {
-        loginViewController.dismiss(nil)
+        DispatchQueue.main.async {
+            loginViewController.dismiss(nil)
+        }
         delegate?.coordinatorDidLogin(self)
     }
 }
