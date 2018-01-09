@@ -17,6 +17,7 @@
 		729090622003D35700CA01D7 /* CDResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290905E2003D35700CA01D7 /* CDResultItem.swift */; };
 		729090692003D6FA00CA01D7 /* ResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729090682003D6FA00CA01D7 /* ResultItem.swift */; };
 		7290906C200410E600CA01D7 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290906B200410E600CA01D7 /* LoginViewPresenter.swift */; };
+		729091192004CC5600CA01D7 /* ResultItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729091182004CC5600CA01D7 /* ResultItemCell.swift */; };
 		72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C2200127BA00DEF997 /* AppDelegate.swift */; };
 		72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C4200127BA00DEF997 /* MainViewController.swift */; };
 		72E1B5C8200127BA00DEF997 /* AlbesTwist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72E1B5C6200127BA00DEF997 /* AlbesTwist.xcdatamodeld */; };
@@ -65,6 +66,7 @@
 		7290905E2003D35700CA01D7 /* CDResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDResultItem.swift; sourceTree = "<group>"; };
 		729090682003D6FA00CA01D7 /* ResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultItem.swift; sourceTree = "<group>"; };
 		7290906B200410E600CA01D7 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
+		729091182004CC5600CA01D7 /* ResultItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultItemCell.swift; sourceTree = "<group>"; };
 		72E1B5BF200127B900DEF997 /* AlbesTwist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbesTwist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E1B5C2200127BA00DEF997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72E1B5C4200127BA00DEF997 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -162,10 +164,28 @@
 		7290906A2004107E00CA01D7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7290911A2004DBE900CA01D7 /* Login */,
+				7290911B2004DBF400CA01D7 /* Main */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7290911A2004DBE900CA01D7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
 				72E1B5FD20027B2400DEF997 /* LoginViewController.swift */,
 				7290906B200410E600CA01D7 /* LoginViewPresenter.swift */,
 			);
-			path = UI;
+			name = Login;
+			sourceTree = "<group>";
+		};
+		7290911B2004DBF400CA01D7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				72E1B5C4200127BA00DEF997 /* MainViewController.swift */,
+				729091182004CC5600CA01D7 /* ResultItemCell.swift */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 		72E1B5B6200127B900DEF997 = {
@@ -196,7 +216,6 @@
 				7290904E2003B2F800CA01D7 /* DataModel */,
 				7290906A2004107E00CA01D7 /* UI */,
 				72E1B5C2200127BA00DEF997 /* AppDelegate.swift */,
-				72E1B5C4200127BA00DEF997 /* MainViewController.swift */,
 				72E1B5C9200127BA00DEF997 /* Assets.xcassets */,
 				72E1B5CB200127BA00DEF997 /* Main.storyboard */,
 				72E1B5CE200127BA00DEF997 /* Info.plist */,
@@ -393,6 +412,7 @@
 				72E1B6112002EB6200DEF997 /* Backend.swift in Sources */,
 				729090692003D6FA00CA01D7 /* ResultItem.swift in Sources */,
 				72E1B60F2002EAF100DEF997 /* Result.swift in Sources */,
+				729091192004CC5600CA01D7 /* ResultItemCell.swift in Sources */,
 				72E1B5C5200127BA00DEF997 /* MainViewController.swift in Sources */,
 				729090622003D35700CA01D7 /* CDResultItem.swift in Sources */,
 				72E1B5C3200127BA00DEF997 /* AppDelegate.swift in Sources */,
