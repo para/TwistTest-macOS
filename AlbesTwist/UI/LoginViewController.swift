@@ -4,7 +4,7 @@ protocol LoginViewControllerDelegate: class {
     func didLogin(_ loginViewController: LoginViewController)
 }
 
-class LoginViewController: NSViewController {
+class LoginViewController: NSViewController, Spinnable {
     @IBOutlet var emailField: NSTextField!
     @IBOutlet var passwordField: NSTextField!
     @IBOutlet var spinner: NSProgressIndicator!
@@ -37,17 +37,11 @@ protocol LoginView: class {
 
 extension LoginViewController: LoginView {
     func showLoading() {
-        DispatchQueue.main.async {
-            self.spinner.isHidden = false
-            self.spinner.startAnimation(self)
-        }
+        startSpinning()
     }
 
     func hideLoading() {
-        DispatchQueue.main.async {
-            self.spinner.isHidden = true
-            self.spinner.stopAnimation(self)
-        }
+        stopSpinning()
     }
 
     func showLoginSuccess() {
