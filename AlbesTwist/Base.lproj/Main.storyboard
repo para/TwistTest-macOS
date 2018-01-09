@@ -336,9 +336,6 @@
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
-                    <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
-                    </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -453,17 +450,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="9iU-Gf-T6j">
+                                <rect key="frame" x="554" y="361" width="16" height="16"/>
+                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstItem="xTZ-Gi-sTs" firstAttribute="leading" secondItem="RqI-LR-dMx" secondAttribute="leading" id="EKN-sE-dS5"/>
+                            <constraint firstItem="9iU-Gf-T6j" firstAttribute="centerY" secondItem="RqI-LR-dMx" secondAttribute="centerY" id="R9L-3e-OCd"/>
                             <constraint firstAttribute="trailing" secondItem="RqI-LR-dMx" secondAttribute="trailing" constant="20" symbolic="YES" id="W1D-5g-oHd"/>
                             <constraint firstItem="xTZ-Gi-sTs" firstAttribute="top" secondItem="RqI-LR-dMx" secondAttribute="bottom" constant="8" symbolic="YES" id="YPv-tF-rci"/>
                             <constraint firstAttribute="bottom" secondItem="xTZ-Gi-sTs" secondAttribute="bottom" constant="20" symbolic="YES" id="aAh-Xr-0ks"/>
                             <constraint firstItem="RqI-LR-dMx" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="kTc-p2-U7H"/>
                             <constraint firstItem="xTZ-Gi-sTs" firstAttribute="trailing" secondItem="RqI-LR-dMx" secondAttribute="trailing" id="l8J-WZ-Z5d"/>
                             <constraint firstItem="RqI-LR-dMx" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="u9j-dK-UOH"/>
+                            <constraint firstItem="9iU-Gf-T6j" firstAttribute="trailing" secondItem="RqI-LR-dMx" secondAttribute="trailing" constant="-10" id="xDT-ce-Iyd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="spinner" destination="9iU-Gf-T6j" id="oKg-iI-kkM"/>
+                        <outlet property="tableView" destination="fjI-5p-0Wg" id="wsR-hZ-dwR"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

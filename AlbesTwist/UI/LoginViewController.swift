@@ -14,6 +14,7 @@ class LoginViewController: NSViewController, Spinnable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         preferredContentSize = NSSize(width: 400.0, height: 200.0)
         spinner.isHidden = true
 
